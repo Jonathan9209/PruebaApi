@@ -1,25 +1,20 @@
-var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+using System;
+//using RestSharp;
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+namespace HelloWorldApplication {
+  class HelloWorld {
+        public static object Method { get; private set; }
 
-var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
+
+      static void Main(string[] args, object method) {
+      var client = new RestClient("https://rickandmortyapi.com/documentation/#rest");
+      client.Timeout = -1;
+      var request = new RestRequest(method.GetType);
+      IRestResponse response = client.Execute(request);
+      Console.WriteLine(value: response.Content);
+    }
+  }
 }
 
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
