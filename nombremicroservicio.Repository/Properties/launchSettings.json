@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "nombremicroservicio.Repository": {
+      "commandName": "Project",
+      "nativeDebugging": false
+    }
+  }
+}

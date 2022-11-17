@@ -1,0 +1,16 @@
+.topbar {
+    background-color: white !important;
+}
+.select-label {
+    color: black !important;
+}
+
+.swagger-ui img {
+    display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(/swagger/banco-pichincha-logo.png) no-repeat;
+  background-size: 100%;
+  width: 180px; /* Width of new image */
+  padding-left: 180px; /* Equal to width of new image */
+}

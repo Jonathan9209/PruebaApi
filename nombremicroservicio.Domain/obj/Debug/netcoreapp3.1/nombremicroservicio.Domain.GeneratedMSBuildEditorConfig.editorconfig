@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = nombremicroservicio.Domain
+build_property.ProjectDir = c:\Users\Jonathan\Desktop\arq-microservicio-netcore-31\nombremicroservicio.Domain\
